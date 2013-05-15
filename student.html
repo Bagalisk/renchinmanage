@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<title>student</title>
+</head>
+
+<body>
+    <div class='student' style='position:absulote; top:0px; width:40%'>
+      <h1>學生資料</h1>
+      <form method='post' action='student'>
+        <p><input type='text' name='no' value='{{s.no}}' placeholder='序號'/></p>
+        <p><input type='text' name='district' value='{{s.district}}' placeholder='所屬地區'/></p>
+        <p><input type='text' name='name' value='{{s.name}}' placeholder='姓名'/>
+           <input type='text' name='birthday' value='{{s.birthday}}' placeholder='生日'/>
+           <input type='text' name='address' value='{{s.address}}' placeholder='住址'/></p>
+        <p><input type='text' name='parent_name' value='{{s.parent_name}}' placeholder='家長姓名'/>
+           <input type='text' name='parent_tel' value='{{s.parent_tel}}' placeholder='電話'/>
+           <input type='text' name='emergency_tel' value='{{s.emergency_tel}}' placeholder='緊急聯絡電話'/></p>
+        <p><input type='text' name='school' value='{{s.school}}' placeholder='學校'/>
+           <input type='text' name='classno' value='{{s.classno}}' placeholder='班級'/></p>
+        <p><input type='text' name='teacher' value='{{s.teacher}}' placeholder='學校老師姓名'/>
+           <input type='text' name='teacher_tel' value='{{s.teacher_tel}}' placeholder='學校老師電話'/></p>
+        <p><textarea type='text' cols='40' rows='5' name='exams' value='{{s.exams}}' placeholder='考試成績'></textarea></p>
+        <p><textarea type='text' cols='40' rows='5' name='daily_notes' value='{{s.daily_notes}}' placeholder='日常表現'></textarea></p>
+        <p><textarea type='text' cols='40' rows='5' name='contact_matters' value='{{s.contact_matters}}' placeholder='家長聯絡事項'></textarea></p>
+        <p class='submit'><input type='submit' name='commit' value='儲存'></p>
+      </form>
+    </div>
+
+    <div class='student-detail' style='position:absolute; top:0px; left:40%;'>
+      <h1>每日學生紀錄</h1>
+      <table border='1'>
+        <tr>
+          <th>日期</th>
+          <th></th>
+          <th></th>
+        </tr>
+    
+    {% for sd in student_details %}
+        <tr>
+          <td>{{sd.date}}</td>
+          <td>{{sd.exams}}</td>
+          <td>{{sd.daily_notes}}</td>
+          <td>{{sd.contect_matters}}</td>
+          <td> <a href=''>[-]</a></td>
+        </tr>
+    {% endfor %}
+        <tr>
+          <form method='post' action='student_detail'>
+          <td><input type='text' name='date' value='{{now}}' placeholder='日期'/></td>
+          <td><textarea type='text' cols='40' rows='5' name='exams' value='' placeholder='考試成績'></textarea></p>
+           <p><textarea type='text' cols='40' rows='5' name='daily_notes' value='' placeholder='日常表現'></textarea></p>
+           <p><textarea type='text' cols='40' rows='5' name='contact_matters' value='' placeholder='家長聯絡事項'></textarea></p></td>
+          <td><input type='submit' name='commit' value='儲存'></td>
+          </form>
+        </tr>
+      </table>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<title>student</title>
+</head>
+
+<body>
+
+<h1>學生清單</h1>
+<p>
+  <table border='1'>
+    <tr>
+      <th>序號</th>
+      <th>地區</th>
+      <th>姓名</th>
+      <th>生日</th>
+      <th>家長</th>
+      <th>電話</th>
+      <th>住址</th>
+      <th>緊急聯絡電話</th>
+      <th>學校</th>
+      <th>班級</th>
+      <th>老師</th>
+      <th>電話</th>
+      <th>考試成績</th>
+      <th>日常表現</th>
+      <th>聯絡事項</th>
+      <th></th>
+    </tr>
+    
+{% for s in students %}
+    <tr>
+      <td>{{s.no}}</td>
+      <td>{{s.district}}</td>
+      <td><a href='/student?no={{s.no}}'>{{s.name}}</a></td>
+      <td>{{s.birthday}}</td>
+      <td>{{s.parent_name}}</td>
+      <td>{{s.parent_tel}}</td>
+      <td>{{s.address}}</td>
+      <td>{{s.emergency_tel}}</td>
+      <td>{{s.school}}</td>
+      <td>{{s.classno}}</td>
+      <td>{{s.teacher}}</td>
+      <td>{{s.teacher_tel}}</td>
+      <td>{{s.exams}}</td>
+      <td>{{s.daily_notes}}</td>
+      <td>{{s.contact_matters}}</td>
+      <td> <a href=''>[-]</a></td>
+    </tr>
+{% endfor %}
+
+    <tr>
+      <td><p><a href='student'>[+]</a></p></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+</td>
+    </tr>
+
+  </table>
+</p>
+
+</body>
+
+</html>

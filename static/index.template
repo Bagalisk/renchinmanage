@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>仁親關懷</title>
+<style type="text/css" media="screen">
+/* 加載csshover3.htc，解決IE6沒有li:hover擬類的問題 */
+* html body {
+	behavior:url("csshover3.htc");
+}
+/* ---------- 大小與定位 ---------- */
+#menu {
+	/* 選單大小 */
+	width:100%;
+	height:30px;
+}
+#menu ul {
+	/* 取消ul樣式符號 */
+	list-style-type:none;
+	/* 重設ul邊界與留白為零 */
+	margin:0;
+	padding:0;
+	/* 內有浮動元件時，需設overflow才會自動調整大小 */
+	overflow:auto;
+}
+* html #menu ul {
+	/* 解決IE6不理overflow問題，直接指定高度 */
+	height:30px;
+}
+#menu ul li {
+	/* 利用float讓第一層li水平排列 */
+	float:left;
+}
+/* 解決IE6條列式餘白問題*/
+* html #menu ul li {
+	display:inline;
+}
+#menu ul li a {
+	/* 將a改為區塊元件，以便指定寬高 */
+	display:block;
+	/* 這邊也要設float，否則IE6會以100%寬度顯示 */
+	float:left;
+	/* 固定高度 */
+	height:30px;
+	width: 100px;
+	text-align: center;
+}
+#menu ul li ul {
+	/* 讓第二層ul跳脫文件流以利定位 */
+	position:absolute;
+	/* 固定寬度 */
+	width:100px;
+	/* 避免出現捲軸 */
+	overflow:visible;
+	/* 讓ul與母階層li相同位置 */
+	clear:left;
+	margin-top: 30px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+/* 修正IE7絕對定位差異 */
+*:first-child+html #menu ul li ul {
+	margin-top:0;
+}
+/* 修正IE6絕對定位差異 */
+* html #menu ul li ul {
+	margin-top:0;
+}
+#menu ul li ul li {
+	/* 覆寫繼承自第一層的浮動設定 */
+	float:none;
+	text-align: center;
+}
+#menu ul li ul li a {
+	/* 覆寫繼承自第一層的浮動設定 */
+	float:none;
+	width: 100%;/* 註：display、height、padding繼承第一層的設定 */
+}
+#menu ul li ul li ul {
+	margin-top: -30px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 100px;
+	width: 100%;
+}
+/* 修正IE7絕對定位差異 */
+*:first-child+html #menu ul li ul li ul {
+	margin-top:-30px;
+}
+#menu ul li ul li ul li {
+/* width、float繼承第二層，免設定 */
+}
+#menu ul li ul li ul li a {
+/* width、float繼承第二層，免設定 */
+}
+/* ---------- 隱藏與顯示階層 ---------- */
+#menu ul li ul {
+	/* 預先隱藏第二層 */
+	visibility:hidden;
+}
+#menu ul li:hover ul {
+	/* 觸動第一層時，顯示第二層 */
+	visibility:visible;
+}
+#menu ul li:hover ul li ul {
+	/* 顯示第二層時，隱藏第三層，避免同時彈出 */
+	visibility:hidden;
+}
+#menu ul li ul li:hover ul {
+	/* 觸動第二層時，顯示第三層 */
+	visibility:visible;
+}
+#menu ul li ul li:hover ul li ul {
+	/* 顯示第三層時，隱藏第四層，避免同時彈出 */
+	visibility:hidden;
+}
+#menu ul li ul li ul li:hover ul {
+	/* 觸動第三層時，顯示第四層 */
+	visibility:visible;
+}
+/* ---------- 以下為美化用，非必需 ---------- */
+
+
+/* 預設字體 */
+#menu {
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+/* 第一層ul背景色彩與邊框 */
+#menu ul {
+	background:#6f6f6f;
+}
+/* 第一層a字型 */
+#menu ul li a {
+	color:#FFF;
+	text-decoration:none;
+	line-height: 30px;
+}
+/*第二層ul背景色彩與邊框  */
+#menu ul li ul {
+	background:#efefef;
+}
+/* 第二層a字型 */
+#menu ul li ul li a {
+	font-size:12px;
+	color:#333333;
+	text-decoration:none;
+}
+/* 觸動第一層li時，改變背景色 */
+#menu ul li:hover, #menu ul li a:hover {
+	background:#efefef;
+}
+#menu ul li:hover a {
+	color:#333333;
+}
+/* 觸動第二層以上li時改變背景色 */
+#menu ul li ul li:hover, #menu ul li ul li a:hover {
+	background:#dfdfdf;
+}
+</style>
+<script type="text/JavaScript">
+function setContent(a)
+{
+  result='';
+  if(a==1)
+  {
+    result='<img src="/images/001.jpg" width="1000" />';
+  }
+  else if(a==2)
+  {
+    result='2';
+  }
+  else if(a==3)
+  {
+    result='給他們吃、喝、穿'
++'遊民關懷事工已近兩年，有節慶佈道、福音影片、聖經真理教導、每週日開車接送到教會崇拜。'
++'<br>常在聚會中真實看見上帝的醫治隨著我們所傳的道，有許多禱告後被醫治的人。'
++'<br>收容所一位原本需要助行器行走的遊民，禱告後，竟開始可以自己去上廁所，上帝實在奇妙！'
++'<br>藉著收容所的服事，兩年來已有41位遊民受洗。'
++'<br>當有人離開收容所再重回職場、重享天倫之樂、恢復神兒女自由的榮耀，就是我們最大的喜樂，也是我們在此服事的目的！'
++'<br>所有的事工都想越做越大，唯獨遊民事工，我們盼望出席人數能越來越少。'
++'<br>但服事兩年了，遊民還是這麼多、需求還是這麼大，無論物資、金錢或人力總是不夠，'
++'<br>我們深信上帝的愛與重生要臨到這群人身上，期盼有心人士與我們一齊回應上帝的愛。'
++'<ul><li>時間：每週五18:00～20:30</li>'
++'<li>對象：中和遊民收容所遊民</li>'
++'<li>人數：約30人</li>'
++'<li>內容：聚會、信仰探索、影片欣賞、節慶活動</li>'
++'<li>需求：✔主日開車接送志工 ✔男士冬天禦寒八成新衣物 ✔星期五19:30前可供應麵包點心並送至中和收容所的店家(弟兄姊妹)</li>'
++'<li>聯絡：李明星傳道 0932-040-912 starlee0112@gmail.com</li></ul>'+'<img src="/images/011.tif"';
+  }
+  document.getElementById('content').innerHTML=result;
+}
+</script>
+</head>
+
+<body>
+
+<div>
+
+</div>
+
+<div id="menu">
+  <ul>
+
+    <li> <a href="#" onclick="setContent(1)">首頁</a>
+      <ul>
+      </ul>
+    </li>
+
+    <li> <a href="#" onclick="setContent(1)">中央專區</a>
+      <ul>
+      </ul>
+    </li>
+
+    <li> <a href="#" onclick="setContent(2)">七大事工</a>
+      <ul>
+        <li><a href="#" onclick="setContent(3)">中和游民收容所</a></li>
+        <li><a href="#" onclick="setContent(4)">仁親之友奉獻</a></li>
+        <li><a href="#" onclick="setContent(5)">年長事工</a></li>
+        <li><a href="#" onclick="setContent(6)">社區兒童課輔班</a></li>
+        <li><a href="#" onclick="setContent(7)">花蓮山興部落</a></li>
+        <li><a href="#" onclick="setContent(8)">喜恩家族</a></li>
+        <li><a href="#" onclick="setContent(9)">鹽光救助服務隊</a></li>
+      </ul>
+    </li>
+
+    <li> <a href="#" onclick="setContent(1)">財務報告</a>
+      <ul>
+      </ul>
+    </li>
+
+    <li> <a href="#" onclick="setContent(1)">服務成果</a>
+      <ul>
+      </ul>
+    </li>
+
+    <li> <a href="#" onclick="setContent(1)">捐款專區</a>
+      <ul>
+      </ul>
+    </li>
+
+    <li> <a href="#" onclick="setContent(1)">線上捐款</a>
+      <ul>
+      </ul>
+    </li>
+
+    <li> <a href="#" onclick="setContent(1)">各聯絡處資訊</a>
+      <ul>
+      </ul>
+    </li>
+
+  </ul>
+</div>
+
+<div id="content">
+<img src="/images/001.jpg" width="1000" />
+</div>
+
+</body>
+
+</html>

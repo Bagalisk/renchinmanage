@@ -1,0 +1,1557 @@
+/*START 06 Feb 2013 modified the style for the footer*/
+html, body, div, span, object, iframe, a
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption,  tfoot, thead,  th,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+.notification { width:980px; position:relative; margin:20px 0; background:url("../images/notification-bar-middle.png") repeat-y; }
+.notification .cap.top { height:5px; background:url("../images/notification-bar-top.png") no-repeat; position:absolute; top:0; width:100%; z-index:1; margin-top:-3px; }
+.notification .cap.bottom { background:url("../images/notification-bar-bottom.png") no-repeat; bottom:0; height:5px; position:absolute; width:100%; margin-bottom:-3px; }
+.notification .content { padding:5px 82px; position:relative; background:url("../images/notification-bar-hero.png") no-repeat 16px 10px; line-height:18px; color:#2B333A; min-height:60px; }
+
+
+#completeList table,tbody,tr,td{
+	margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+#dispInlineList table,tbody,tr,td{
+	margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+#footer td{	
+	padding-top: 10px;
+}
+/*END 06 Feb 2013 modified the style for the footer*/
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+/* ------------------ new clearfix  */
+.dataRow:after,
+.headerRow:after,
+.group:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+  }
+*:first-child+html .dataRow,   
+*:first-child+html .headerRow,  
+*:first-child+html .group { zoom: 1; }
+
+/* ----------------------------------- */
+
+body {
+  background-color: #f1f1f1;
+  font: 11px Lucida Grande, Geneva, Verdana, Arial;
+}
+#page {
+  width: 980px;
+  background-color: #fff;
+  margin: 0 auto;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.125);
+}
+/* ------------------ Main Nav header  */
+
+#navHeader ul {
+  list-style: none;
+}
+#navHeaderTop {
+background-color: #7e8aa0; /* fallback color if gradients are not supported */
+background-image: -webkit-linear-gradient(top,  #7e8aa0, #54637b); /* For Chrome and Safari */
+background-image:    -moz-linear-gradient(top, #7e8aa0, #54637b); /* For old Fx (3.6 to 15) */
+background-image:     -ms-linear-gradient(top,  #7e8aa0, #54637b); /* For pre-releases of IE 10*/
+background-image:      -o-linear-gradient(top,  #7e8aa0, #54637b); /* For old Opera (11.1 to 12.0) */
+background-image:         linear-gradient(to bottom,  #7e8aa0, #54637b); /* Standard syntax; must be last */
+line-height: 32px;
+}
+
+#logo {
+  padding-top: 8px;
+}
+#leftNav {
+  float: left;
+  width: auto;
+  list-style: none;
+  margin-left: 10px;
+}
+#leftNav > li {
+  float: left;
+  margin-right: 17px;
+  color: #fff;
+}
+#rightNav {
+  float: right;
+  width: auto;
+  list-style: none;
+  margin-right: 10px;
+  font-weight: bold;
+  /*margin-top: -32px;*/
+}
+#rightNav > li {
+  float: left;
+  margin-left: 44px;
+  color: #fff;
+}
+#navHeaderTop a, #navHeaderSecond a {
+  color: #fff;
+  text-decoration: none;
+}
+/* vendor dropdown */
+#vendorNav > ul {
+  width: 220px;
+}
+li#vendorNav ul li {
+  width: 220px;
+  display: block;
+  clear: both;
+}
+li#vendorNav ul li a {
+  overflow: hidden;
+}
+#vendorNav .vendorName { 
+  display: block; 
+  float: left;
+  width: 90px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+#vendorNav .vendorNum {
+  display: block;
+  float: left;
+  width: 65px;
+  padding-right: 10px;
+}
+#vendorNav .vendorStatus {
+  display: block;
+  float: left;
+  width: 25px;
+}
+#vendorNav #manageVendors {
+  border-top: 1px solid #dedede;
+}
+
+/* ------------------ Secondary Nav header  */
+#navHeaderSecond {
+  background-color: #45525d;
+  height: 26px;
+  line-height: 26px;
+  font-weight: bold;
+}
+#navHeaderSecond ul {
+  margin: 0 auto;
+  text-align: center;
+}
+#navHeaderSecond li {
+  display: inline-block; zoom: 1; *display: inline;
+  margin: 0 10px;
+}
+#navHeaderTop li.current,
+#navHeaderSecond li.current {
+  background: url('../images/arrow_current.png') bottom center no-repeat;
+}
+
+/* ------------------ General Dropdown Nav  */
+li.withNav {
+  cursor: pointer;
+  position: relative;
+}
+li.withNav div {
+  background: url('../images/arrow_down.png') center right no-repeat;
+  padding-right: 12px;
+}
+
+li#home a {
+  padding-left: 17px;
+  background: url('../images/home.png') 0 -2px no-repeat;
+}
+/* .badgeable {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  background: url('../images/badge_right.png') top right no-repeat;
+  width: auto;
+  height: 19px;
+  padding-right: 8px;
+  line-height: 17px;
+  font-size: 10px;
+  top: -7px;
+  margin-left: -5px;
+  right: -17px;
+}
+.badge span {
+  width: auto;
+  height: 19px;
+  background: url('../images/badge_left.png') top left no-repeat;
+  display: block;
+  padding-left: 8px;
+} */
+
+#downloadButton {
+  position: relative;
+  height: 20px;
+}
+.datelist,
+#downloadButton > ul,
+li.withNav > ul {
+  position: absolute;
+  left: -9999px;
+  width: 159px;
+  border: 1px solid #eaeaea;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.125);
+  background-color: #fff;
+  list-style: none;
+  z-index: 100;
+}
+.datelist {
+  left: auto;
+  width: 202px;
+  position: absolute;
+}
+.year-picker.datelist,
+.month-picker.datelist {
+  height: 120px;/* 13 Feb,2013 -  Changed for Monthly & Yearly  calendar,as previously it crops off text at the drop down.*/
+  overflow: auto;
+}
+.datelist ul {
+  list-style:none;
+  line-height: 24px;
+}
+li:hover.withNav > ul {
+  left: -10px;
+  line-height: 24px;
+}
+#downloadButton:hover > ul {
+  top: 20px;
+  left: 0;
+  line-height: 24px;
+}
+#downloadButton > ul li,
+li.withNav ul li {
+  width: 159px;
+}
+.datelist li a,
+#navHeaderTop li.withNav li a,
+li.withNav li a {
+  color: #45525d;
+  padding: 0 10px;
+  display: block;
+  font-weight: normal;
+  text-decoration: none;
+}
+.datelist li.hover a, 
+#downloadButton li a:hover,
+#navHeaderTop li.withNav li a:hover,
+li.withNav li a:hover {
+  background-color: #9fa7ae;
+  color: #fff;
+  border-radius:2px;/* 14 Jan 2013 Fix for CSS Issue */
+}
+.datelist li a:hover {
+  background-color: #E7E9EB;
+  color: #45525d;
+}
+
+/* ------------------ Content  */
+#content {
+  padding: 30px 20px;
+  margin-bottom: -28px;
+}
+
+#contentHeaderLeft {
+  float: left;
+  width: auto;
+  margin-left: -16px;/*26 Feb 2013 - changes for left alignment*/
+}
+#contentHeaderRight {
+  float: right;
+  width: auto;
+  margin-top: -5px; /*13 Feb,2013 -    Changed for Sub content menu and calendar to be aligned. */
+}
+#contentFooterRight {
+  float: right;
+  width: auto;
+}
+.button {
+  border: 1px solid #3e82b6;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #4192db;
+  background: -moz-linear-gradient(top, #73b6ea 1px, #52a8e8 2px, #2d78cc 100%);
+  background: -webkit-linear-gradient(top, #73b6ea 1px, #52a8e8 2px, #2d78cc 100%);
+  background: -o-linear-gradient(top, #73b6ea 1px, #52a8e8 2px, #2d78cc 100%);
+  background: -ms-linear-gradient(top, #73b6ea 1px, #52a8e8 2px, #2d78cc 100%);
+  background: linear-gradient(top, #73b6ea 1px, #52a8e8 2px, #2d78cc 100%);
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  float: left;
+  font-weight: bold;
+  padding: 2px 18px;
+}
+/* ------------------ Datepicker  */
+#datePickersWrapper {
+  float: left;
+ /* margin-right: 20px;*/ /*26 Feb 2013 - changes for right alignment*/
+  width: 204px;
+}
+
+#datePickerMethod {
+  display: none;
+  position: absolute;
+  margin-top: -24px;
+}
+#datePickerMethod > ul {
+  border: 1px solid #e7e9ef;
+  border-right: none;
+  width: 203px;
+}
+
+#datePickerMethod > ul li {
+  list-style: none;
+  color: #595959;
+  padding: 5px;
+  float: left;
+  border-right: 1px solid #e7e9ef;
+  background-color: #f2f3f3;
+  text-align: center;
+}
+#datePickerMethod > ul li:hover, 
+#datePickerMethod > ul li.hover {
+  background-color: #9fa7ae;
+  color: #fff;
+  cursor: pointer;
+  border-right: 1px solid #9fa7ae;
+}
+
+#dailypicker {
+  width: 31px;
+}
+#weeklypicker {
+  width: 40px;
+}
+#monthlypicker {
+  width: 44px;
+}
+#yearlypicker {
+  width: 44px;
+}
+
+#datefield {
+  float: left;
+  width: 204px;
+  text-align: center;
+  line-height: 31px;
+}
+#chosenDate {
+  text-align: center;
+  cursor: pointer; /*11 Feb,2013 added css for the date*/
+}
+#incrLess {
+  width: 10px;
+  height: 31px;
+  display: block;
+  float: left;
+  background: url('../images/arrow_left_gry.png') center left no-repeat;
+  margin-left: 9px
+} 
+#incrMore {
+  width: 10px;
+  height: 31px;
+  float: right;
+  display: block;
+  background: url('../images/arrow_right_gry.png') center right no-repeat;
+  margin-right: 8px;
+}
+#incrLess.disabled,
+#incrMore.disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+#datefield.daywidth #incrLess {
+  margin-left: 43px;
+}
+#datefield.daywidth #incrMore {
+  margin-right: 43px; 
+}
+#datefield.weekwidth #incrLess {
+  margin-left: 22px;
+}
+#datefield.weekwidth #incrMore {
+  margin-right: 22px; 
+}
+#datefield.monthwidth #incrLess {
+  margin-left: 35px;
+}
+#datefield.monthwidth #incrMore {
+  margin-right: 35px; 
+}
+#datefield.yearwidth #incrLess {
+  margin-left: 65px;
+}
+#datefield.yearwidth #incrMore {
+  margin-right: 65px; 
+}
+#datefield.weekwidth{
+	margin-left: -21px;
+}
+#datefield.monthwidth{
+	margin-left: -8px;
+}
+#datefield.yearwidth{
+	margin-left: 22px;
+}
+/* ------------------ Datepicker Dropdown  */
+.ui-datepicker-header {
+  background: #aeb7bf; /* Old browsers */
+  background: -moz-linear-gradient(top, #aeb7bf 0%, #8b959d 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top, #aeb7bf 0%,#8b959d 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #aeb7bf 0%,#8b959d 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #aeb7bf 0%,#8b959d 100%); /* IE10+ */
+  background: linear-gradient(top, #aeb7bf 0%,#8b959d 100%); /* W3C */
+  text-align: center;
+  color:#fff;
+  padding: 5px;
+  position: relative;
+}
+.ui-datepicker-prev { 
+  position: absolute; 
+  top: 1px; left: 0; 
+  display: block; 
+  padding: 7px; 
+  cursor: pointer; }
+.ui-datepicker-next { 
+  position: absolute; 
+  top: 2px; right:0; 
+  display: block; 
+  padding: 7px; 
+  cursor: pointer; }
+.ui-datepicker-prev span { text-indent:-9999px; 
+  width: 0; height: 0; 
+  border-top: 5px solid transparent; 
+  border-bottom: 5px solid transparent; 
+  border-right: 5px solid #fff;  
+  display: block; }
+.ui-datepicker-next span {  text-indent:-9999px; 
+  width: 0; 
+  height: 0; 
+  border-top: 5px solid transparent; 
+  border-bottom: 5px solid transparent; 
+  border-left:5px solid #fff; 
+  display: block; }
+.ui-datepicker-next.ui-state-disabled {
+  cursor: default;
+}
+.ui-datepicker-next.ui-state-disabled span { border-left-color: #e5e4e4; }
+.ui-datepicker-title { text-shadow: 0 0 1px #6B7176; }
+.ui-datepicker table { width: 100%; font-size: 11px; }
+.ui-datepicker th { text-align:center; color: #bfbfbf; }
+.ui-datepicker td { text-align:center; padding: 0; color:#00b3e7; }
+.ui-datepicker td a { display: block; margin: 0 auto;
+  text-align:center; color:#00b3e7; text-decoration: none; padding: 2px; }
+.ui-datepicker td.ui-datepicker-unselectable { color: #B2B2B2; }
+
+.ui-datepicker th span, .ui-datepicker td span {
+  padding: 2px;
+  display: block;
+}
+.ui-datepicker td a.ui-priority-secondary {
+  color: #88e4ff;
+}
+.ui-state-active, .previouslySelected a {
+  background-color: #9fa7ae;
+}
+td a.ui-state-active, .ui-datepicker td.previouslySelected a {
+  color: #fff;
+}
+.ui-datepicker td a.ui-state-hover {
+   background-color: #E7E9EB;
+   color:#00b3e7;
+}
+/* ------------------ General Type Styles  */
+h1 {
+  color: #45525D;
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+/* h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 0 10px;
+  color: #333;
+} */
+.searchField {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  -moz-box-shadow: inset 1px 1px 2px #a3a3a3;
+  -webkit-box-shadow: inset 1px 1px 2px #a3a3a3;
+  box-shadow: inset 1px 1px 2px #a3a3a3;
+  background: #fff url('../images/search_icn.png') 6px 6px no-repeat;
+  padding: 5px 5px 2px 19px;
+  font-size: 12px;
+  line-height: normal;
+  width: 150px;
+  height: 13px;
+}
+a {
+  color: #0088CC;
+  text-decoration: none;
+}
+
+/*.productInlineList{
+ color: #45525d;
+  padding: 0 10px;
+  display: block;
+  font-weight: normal;
+  text-decoration: none;
+  background: url('../images/downward.png') right center no-repeat;
+  background-position: 100% 40%;
+background-size: 15px;
+padding-right: 20px;
+  }*/
+ 
+
+#allProductIds li:hover,
+#allSubProductIds li:hover,
+#allTransIds li:hover,
+#allVideoTypeIds li:hover {
+  background-color: #9fa7ae;
+  color: #fff;
+  width: 132px;
+  cursor:pointer;/*21 Feb,2013 - Changes for Control bar Whole mouse over should be displayed as clickable*/
+}
+
+.inlineBackground{
+ 	background-image:url('../images/inlineList.png');
+ 	box-shadow: rgba(0, 0, 0, 0.29) 0px 1px 2px;
+ 	font-family: Lucida Grande;
+ 	font-size: 11px;
+ 	color: #4A4A4A; //
+ 	padding-right: 10%;
+ 	border-top-right-radius:3px;
+ 	border-bottom-right-radius:3px;
+	border-bottom-left-radius:3px;
+ 	
+}
+
+
+
+
+.productDataInlineTop{
+ cursor:pointer;
+ overflow:hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap; 
+ display: inline-block;
+ /*width: 100px;*/
+ height:20px; /*Fix for downward arrow image in FF*/
+ vertical-align: middle; /* Alignment of the selected vendor */
+ color: #090909;
+ font-weight: normal;
+ text-shadow: rgba(255, 255, 255, 0.9) 1px 1px 0px;
+ }
+ .productDownArrow {
+ float:right;
+ margin-top: -20px;
+}
+
+.subProductDataInlineTop{
+ cursor:pointer;
+ overflow:hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap; 
+ display: inline-block;
+ width: 100px;
+ height:20px; /*Fix for downward arrow image in FF*/
+ vertical-align: middle; /* Alignment of the selected vendor */
+ color: #57646E;
+ font-weight: bold;
+ text-shadow: rgba(255, 255, 255, 0.9) 1px 1px 0px;
+ margin-bottom: 8px;
+ }
+.transTypeDownArrow {
+ float:right;
+ margin-top:-37px;
+ padding-top:5px;
+}
+.productInlineList{
+ /*START - CSS For Active/Inactive Inline List to remove white bg color*/
+  /*background-image:url('../images/inlineList.png');
+  background-position:center;*/
+  /*END - CSS For Active/Inactive Inline List to remove white bg color*/
+  float:left;
+  /*margin-top:-37px;*/
+  /*margin-left:16px;*/
+ /* width:50px;*/
+  height:23px;
+  cursor:pointer;
+/* overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block; */
+  padding-top: 3px;
+  padding-left: 10px;
+  /*font-family: Lucida Grande;
+  font-size: 11px;*/
+  color: #4A4A4A;
+  direction: ltr; 
+  background: url('../images/arrow_down.png') right center no-repeat;
+  /*background-position: 80% 40%;*/
+background-size: 7px;
+padding-right: 12px;/*21 Feb,2013 - Changes for Control bar types and arrow spacing*/
+padding-left:0px;/*21 Feb,2013 - Changes for Control bar types and arrow spacing*/
+  /*min-width: 20px;*/ /*14 Feb, 2013 - To fix Transaction type drop down doesn't list down when moved diagonally. */
+  }
+ .productInlineListClick{
+  float:left;
+  margin-top:-37px;
+  margin-left:16px;
+  /*width:190px;*/
+  height:23px;
+  cursor:pointer;
+  padding-top: 3px;
+  padding-left: 10px;
+  font-family: Lucida Grande;
+  font-size: 11px;
+  color: #4A4A4A;
+  direction: ltr;
+  background-image:url('../images/inlineList.png');
+  border-top-left-radius:3px;
+  border-top-right-radius:3px;  
+  /*border-top-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgb(231, 231, 231);
+  border-left-style: solid;
+  border-right-color: rgb(231, 231, 231);
+  border-left-style: solid;
+  border-rightcolor: rgb(231, 231, 231);  */
+  } 
+  
+  .homeIconClass{
+	width :10px;
+	}
+	
+	#nav, #nav ul{
+/*margin:0 15px;*/
+padding:0;
+list-style-type:none;
+list-style-position:outside;
+position:relative;
+line-height:1.5em; 
+}
+
+#nav li{
+float:left;
+position:relative;
+z-index: 1000;
+}
+
+#nav ul {
+position:absolute;
+display:none;
+width:12em;
+top:-12px;
+border: solid 1px #D1D1D1;
+}
+
+#nav li ul a{
+/*width:240px;*/
+/*height:auto;*/
+float:left;
+}
+
+#nav ul ul{
+top:auto;
+}	
+
+#nav li ul ul {
+left:250px;
+margin:0px 0 0 10px;
+}
+
+.vendorDataInline{
+	cursor:pointer;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+	display: inline-block;
+	width: 130px;/*21 Feb,2013 - Changes for Control bar Whole mouse over should be displayed as clickable*/
+	font-weight: normal;
+	height:20px; /* Fix for downward arrow image in FF*//* Fix for Radar 13058690 - 22 Jan 2013 */	
+}
+/*For control bar Aug 2012*/
+
+
+h2 {
+font-size: 17px;
+font-weight: normal;
+margin: 0 0 10px;
+color: #262626;
+padding-top: 10px;
+padding-left: 10px;
+text-shadow: 0 1px 0 #EEE;
+}
+.tablePreview{
+	border: 1px;
+	
+    
+    text-shadow: 0 1px 0 #EEE;
+    color: #45535D;
+    width: 100%;
+    text-align: center;
+    
+}
+.tablePreview th{
+	padding-top: 12px;
+padding-bottom: 9px;
+
+}
+.tablePreview td{
+	padding-top: 12px;
+padding-bottom: 9px;
+
+}
+.title{
+	width:145px;
+}
+.artist{
+	width:78px;
+}
+.type, .store{
+	width:30px;
+}
+.cum_ordered{
+	width:100px;
+}
+.cum_cancelled{
+	width:112px;
+}
+.cum_fulfilled{
+	width:105px;
+}
+.cum_open{
+	width:92px;
+}
+.start_date, .end_date{
+	width:85px;
+}
+.appleId{
+	width:79px;
+}
+
+
+	
+/*******CSS FOR TOP MARKET AND PRODUCT TABLES******/
+.dataRowEven
+{
+color: #595959;
+height: 53px;
+}
+.dataRowOdd
+{
+background-color:#EAECF0;
+clear: both;
+height: 53px;
+}
+
+
+/*******CSS FOR TOP MARKET AND PRODUCT TABLES******/
+
+
+/*******START CSS FOR VENDOR CHANGES******/
+
+.vendorDataInlineVendor{
+	cursor:pointer;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+	display: inline-block;
+	width: 130px; /*Change to show more characters in vendor selection 21 Feb 2013*/
+	font-weight: normal;
+	height:14px; /* Fix for downward arrow image in FF*/
+	padding-left: 5px;
+}
+
+
+
+.withNav .downArrow {
+	float:right;
+	margin-top: -30px;
+	padding-left:185px;
+} 
+
+.withNav .inlineList{
+
+  float:left;
+  margin-top:-23px;
+  margin-left:-10px;
+  width:190px;
+  height:36px;/*13 Feb,2013 - modified to fix Vendor list for Normal User disappears*/
+  cursor:pointer;
+  padding-top: 18px;
+  padding-left: 10px;
+  font-family: Lucida Grande;
+  font-size: 11px;
+  
+  direction: ltr; 
+   
+  }
+
+.withNav .inlineListMouseOver{
+  float:left;
+ 
+  margin-left:16px;
+  width:230px;
+  height:23px;
+  cursor:pointer;
+
+  padding-left: 10px;
+  font-family: Lucida Grande;
+  font-size: 11px;
+  
+  direction: ltr;
+  border: #AAAAAA solid 1px;
+
+  }
+
+.withNav .inlineListClick{
+  float:left;
+  margin-top:-37px;
+  margin-left:16px;
+  width:190px;
+  height:32px;
+  cursor:pointer;
+  padding-top: 3px;
+  margin-left: 110px;
+  font-family: Lucida Grande;
+  font-size: 11px;
+  direction: ltr;
+  }
+  
+ .withNav .vendorDataInlineTop{
+	cursor:pointer;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+	display: inline-block;
+	width: 100px;
+	margin-top:12px;
+	/*height:40px;13 Feb,2013 - modified to fix Vendor list for Normal User disappears*/
+	height:30px; /* Fix for downward arrow image in FF*/
+	vertical-align: middle; /* Alignment of the selected vendor */
+	color: #FFFFFF;
+	font-weight: bold;
+	
+	padding-left: 8px;
+	}
+	
+	.withNav .inlineBackground_vendor{
+ 	background-image:url('../images/inlineList.png');
+ 	background-color:white;
+ 	font-family: Lucida Grande;
+ 	font-size: 11px;
+ 	border: 1px solid #D1D5DC;
+ 	color: #4A4A4A; //
+ 	padding-right: 10%;
+ 	border-top-right-radius:3px;
+ 	  border-bottom-right-radius:3px;
+border-bottom-left-radius:3px;
+ 	
+}
+
+	.withNav .inlineBackgroundMoreList{
+ 	background-image:url('../images/inlineList.png');
+ 	box-shadow: rgba(0, 0, 0, 0.29) 0px 1px 2px;
+ 	font-family: Lucida Grande;
+ 	font-size: 11px;
+ 	color: #4A4A4A; //
+ 	padding-right: 10%;
+ 	  border-bottom-right-radius:3px;
+border-bottom-left-radius:3px;
+border: 1px solid #D1D5DC;			
+}	
+.manageInline{
+	width: 260px; 
+	padding-left: 10px; 
+	padding-bottom: 5px;
+	color: #000000;
+}
+ .withNav .vendorNumInline{
+	cursor:pointer;
+	width: 60px;
+	/*color:black;*/
+	padding-top:8px;
+}
+/*class added to decrease font of ACTIVE in inline list*/
+ .withNav .vendorStatusInline
+{
+	cursor:pointer;
+	width: 5px;/*21 Feb,2013 - manage vendor list should be left alligned*/
+	padding-left:3px;
+	padding-right:2px;
+	font-size: 8px;
+	border:1px solid;
+	border-radius:2px;
+}
+
+ .withNav .vendorStatus{
+	cursor:pointer;
+	width: 62px;
+	color: #989898;
+}
+
+ .withNav .vendorDataDisable{
+	cursor:auto;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+	display: inline-block;
+	width: 100px;
+	height:14px; /* Fix for downward arrow image in FF*/
+	color: #989898;
+}
+
+ .withNav .vendorNumDisable{
+	cursor:auto;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+	display: inline-block;
+	width: 60px;
+	color: #989898;
+}
+
+ .withNav .vendorStatDisable{
+	cursor:auto;
+	width: 62px;
+	color: #989898;
+	font-size: 8px;
+	border:1px solid #989898;
+	border-radius:2px;
+}
+
+ .withNav .vendorStatBorder{
+	border:1px solid grey;
+	border-radius:5px;	
+}
+
+.withNav .listMouseOver{
+	
+	background: url('../images/headerSel.png');
+	cursor: pointer;  /* Entire row should have pointer */
+	border: #FFFFFF;
+	color:white !important;
+	}
+	
+	.list{
+	color:black;
+	}
+
+.withNav #nav a.manageLink{
+	color: black;
+	font-family: Lucida Grande, Geneva, Verdana, Arial;
+    font-weight: normal;
+}
+.withNav #nav a.manageLink:hover {
+ background: url('../images/headerSel.png');
+    color: #FFFFFF;
+    font-family: Lucida Grande, Geneva, Verdana, Arial;
+    font-weight: normal;
+    border-bottom-right-radius:3px;
+    border-bottom-left-radius:3px;  
+}
+
+.withNav #nav a.manageLinkViewMore {
+	color: black;	
+	font-family: Lucida Grande, Geneva, Verdana, Arial;
+    font-weight: normal;
+}
+
+
+.withNav #nav a.manageLinkViewMore:hover {
+	background: url('../images/headerSel.png');
+	color: #FFFFFF;
+	border-bottom-right-radius:3px;
+    border-bottom-left-radius:3px;
+    font-family: Lucida Grande, Geneva, Verdana, Arial;
+    font-weight: normal;
+}
+
+div.lightbox {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:0;
+  padding:0;
+  z-index:100;
+display:block;
+  background:url('../images/lightbox-bg.png');
+min-height: 1248px;
+}
+div.lightbox.hidden {
+  display:none;
+}
+div.lightbox div.vendor-select-window {
+  position:relative;
+  top:250px;
+  width:658px;
+  height:375px;
+  margin-left:auto;
+  margin-right:auto;
+  background: url('../images/lightbox-window.png') no-repeat;
+}
+div.lightbox div.vendor-select-window div.heading {
+  float:left;
+  font-size: 16px;
+  text-shadow: rgba(255, 255, 255, 0.9) 1px 1px 0px;
+  color: rgb(65, 65, 65);
+  font-weight: 400;
+  margin-top:17px;
+  margin-left:25px;
+}
+div.lightbox div.vendor-select-window div.sub-heading {
+  float:right;
+  margin-top:20px;
+  margin-right:25px;
+  color: rgb(72, 72, 72);
+  text-shadow: rgba(255, 255, 255, 0.9) 1px 1px 0px;
+}
+div.lightbox div.vendor-select-window div.vendor-list {
+  position:absolute;
+  top:50px;
+  left:14px;
+  width:571px;
+  height:268px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+div.lightbox div.vendor-select-window div.passkey-list {
+  position:absolute;
+  top:160px;
+  left:200px;
+  width:571px;
+  height:268px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+div.lightbox div.vendor-select-window div.customButton {
+  position:absolute;
+  top:325px;
+  left:25px;
+  margin-right:10px;
+}
+div.lightbox div.vendor-select-window div.customButton * {
+  height:23px;
+  float:left;
+  margin:0;
+  padding:0;
+  cursor:pointer;
+}
+div.lightbox div.vendor-select-window div.customButton .left {
+  width:10px;
+}
+div.lightbox div.vendor-select-window div.customButton .text {
+  padding-top:4px;
+  padding-left:10px;
+  padding-right:10px;
+  color: rgb(72, 72, 72);
+  text-shadow: rgba(255, 255, 255, 0.9) 1px 1px 0px;
+}
+div.lightbox div.vendor-select-window div.customButton .right {
+  width:13px;
+}
+div.lightbox div.vendor-select-window div.customButton .left {
+  background-image: url('../images/btn-lightbox-left.png');
+  background-repeat: no-repeat;
+}
+div.lightbox div.vendor-select-window div.customButton .text {
+  background-image: url('../images/btn-lightbox-mid.png');
+  background-repeat: repeat-x;
+}
+div.lightbox div.vendor-select-window div.customButton .right {
+  background-image: url('../images/btn-lightbox-right.png');
+  background-repeat: no-repeat;
+}
+
+
+div.vendor-list div.vendor {
+  overflow:hidden;
+  border-top:solid 1px #F2F2F2;
+  border-bottom:solid 1px #A4A4A6;
+  background-color:#E6E6E6;
+}
+div.vendor-list div.vendor.selected {
+  border-top:solid 1px #F9F9F9;
+  background-color:#CCCCCC;
+}
+div.vendor-list div.vendor:hover {
+  border-top:solid 1px #A2CCF0;
+  border-bottom:solid 1px #8F8F8F;
+  background:url("../images/rollover-gradient.png");
+}
+div.vendor-list div.vendor div {
+  float:left;
+  color: rgb(51, 51, 51);
+}
+div.vendor-list div.vendor.disabled div {
+  float:left;
+  color:#868686;
+}
+div.vendor-list div.vendor.disabled:hover {
+  border-top:solid 1px #F2F2F2;
+  border-bottom:solid 1px #A4A4A6;
+  background:#E6E6E6;
+  color:#868686;
+}
+div.vendor-list div.vendor.disabled:hover div,
+div.vendor-list div.vendor.disabled:hover span.vendor-area {
+  color:#868686;
+}
+div.vendor-name-and-area {
+  width:300px;
+  margin-left:13px;
+  margin-top:10px;
+}
+
+div.vendor-list div.vendor div.vendor-name {
+  font-weight:500;
+  float:none;
+  clear:right;
+}
+div.vendor-list div.vendor span.vendor-area {
+  width:95%;
+  padding-bottom:6px;
+  display:block;
+  margin-top:0px;
+  color: #989898;
+  font-size:.8em;
+}
+div.vendor-id {
+  width:106px;
+  text-align:left;
+  margin-top:16px;
+}
+
+div.vendor-media-types .hidden {
+  display:none;
+}
+div.vendor-default {
+  margin-top:14px;
+  width:20px;
+  height:20px;
+  background:url('../images/lightbox-default.png') no-repeat;
+}
+div.vendor-default input[type="radio"] {
+  display:none;
+}
+div.vendor-list div.vendor-default.selected {
+  background:url('../images/lightbox-default-selected.png') no-repeat;
+}
+div.vendor-list div.vendor.disabled div.vendor-default {
+  background:url('../images/lightbox-disabled.png') no-repeat;
+}
+div.vendor-list div.vendor:hover div,
+div.vendor-list div.vendor:hover span.vendor-area {
+  color:white;
+}
+
+
+
+.media-type-music {
+  background:url('../images/lightbox-icon-music.png') no-repeat;
+  background-position: left center;
+   width:1px;
+}
+.media-type-film {
+  background:url('../images/lightbox-icon-film.png') no-repeat;
+  background-position: left center;
+   width:1px;
+}
+.media-type-tv {
+  background:url('../images/lightbox-icon-apps.png') no-repeat;
+  background-position: left center;
+   width:1px;
+}
+.media-type-games {
+  background:url('../images/Games-Icon.png') no-repeat;
+  background-position: left center;
+   width:1px;
+}
+.media-type-apps {
+  background:url('../images/Apps-Icon.png') no-repeat;
+  background-position: left center;
+   width:1px;
+}
+.media-type-books {
+  background:url('../images/Books-Icon.png') no-repeat;
+  background-position: left center;
+   width:1px;
+}
+
+.hidden {
+  display:none;
+}
+
+.statusColClass{
+	width: 5px;/*21 Feb,2013 - manage vendor list should be left alligned*/
+	padding-left:2px;
+}
+
+.homeIconClass{
+	width :10px;
+	}
+	
+.separateInline{
+	background-image: url('../images/data-wrapper-middle.png');
+	background-repeat: repeat-x;
+	}
+
+
+#popup_container {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	min-width: 300px; /* Dialog will be no smaller than this */
+	max-width: 600px; /* Dialog will wrap after this width */
+	background: #FFF;
+	border: solid 5px #999;
+	color: #000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#popup_title {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.75em;
+	color: #666;
+	background: #CCC url(images/title.gif) top repeat-x;
+	border: solid 1px #FFF;
+	border-bottom: solid 1px #999;
+	cursor: default;
+	padding: 0em;
+	margin: 0em;
+}
+
+#popup_content {
+	padding: 1em 1.75em;
+	margin: 0em;
+}
+
+#popup_message {
+	padding-left: 80px;
+}
+
+#popup_panel {
+	text-align: center;
+	margin: 1em 0em 0em 1em;
+}
+
+#popup_prompt {
+	margin: .5em 0em;
+}
+#manageVendorTable td{
+	height: 40px;
+}
+
+.manageVendorName {
+	text-align: left;
+	width: 210px;
+    float:none;
+    clear:right;
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	color:#333333;
+}
+
+.manageVendorID {
+	width: 50px;/*28 Jan,2013 changes to fix a IE9 issue proper display of content type icons in manage vendor list */
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+	color:#333333;
+}
+
+.manageVendorStatus {
+	padding-left: 10px;
+	text-align: left;
+	/* header select CSS on sort*/
+	padding-bottom: 11px;
+	padding-top: 9px;
+	width: 100px;
+	padding-right: 1px;
+	color:#333333;
+}
+
+#manageVendorTable th.radioDefault {
+	background-image: url('../images/Default_home.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	/* For Default home Icon -webkit-padding-end to be put after padding-right.. If not the latter will overwrite the former */
+	padding-right: 30px;
+	-webkit-padding-end: 10px;
+	-moz-padding-end: 10px;
+	/* For Default home Icon*/
+	width: 50px\9; /* For IE */
+}
+
+#manageVendorTable th.manageVendorCheckHide {
+	width: 130px;
+	text-align: center;
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+.manageVendorCheckHide {
+	width: 130px;
+	text-align: center;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 25px;
+}
+
+.manageVendorRadioDefault{
+	width:30px;/*28 Jan,2013 changes to fix a IE9 issue proper display of content type icons in manage vendor list */
+	text-align: center;
+	vertical-align: middle;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+div.lightbox div.vendor-select-window div.manageHeading {
+  text-align: center;
+  font-size: 16px;
+  text-shadow: rgba(255, 255, 255, 0.9) 1px 1px 0px;
+  color: rgb(65, 65, 65);
+  font-weight: 400;
+  margin-top:17px;
+  margin-left:25px;
+  padding-top: 20px;
+  margin-bottom: 12px\9; /* Active/Inactive - IE header selection CSS - 200212 */
+}
+
+.vendorArea{
+  width: 110px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  padding-bottom:6px;
+  margin-top:0px;
+  color: #808080;
+  font-size:.8em;
+}
+/*START - 28Mar'2012*/
+.transactionDate {
+  width: 110px;
+  white-space: nowrap;
+  padding-bottom:6px;
+  margin-top:0px;
+  color: #808080;
+  font-size:.8em;
+}
+
+
+.headerClass {
+	float: left;
+	font-size: 13px;
+	text-shadow: rgba(255, 255, 255, 0.9) 1px 1px 0px;
+	color: rgb(65, 65, 65);
+	font-weight: 400;
+	text-align: left;
+	width: 641px;
+	font-family: Lucida Grande, Geneva, Verdana, Arial;
+	background-image: url('../images/head.png');
+	margin-left: 1.31em;
+	margin-left: 14px\9; /* Active/Inactive - IE header selection CSS - 200212 */
+	height: 30px;
+	padding-bottom: 5px;
+	/* header select CSS on sort*/
+	margin-top: 10px; /* Active/Inactive - FF/Safari header selection CSS - 200212 */
+	padding-top: 0px;
+	/* Active/Inactive - IE header selection CSS - 200212 */
+ 	margin-bottom: -5px\9; /* IE header background fix - 06-03-2012 */
+	margin-top: -4px\9;  /* IE header position fix - 21 Feb,2013 */
+	height: 38px\9; /* IE header background fix - 06-03-2012 */
+	/* Active/Inactive - IE header selection CSS - 200212 */
+}
+
+.bodyclass{
+	margin-top: -20px;
+	text-align: center;
+	width: 655px;
+	font-family: Lucida Grande, Geneva, Verdana, Arial;
+	padding-left: 20px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: bottom;
+	zoom: 1;
+	*display: inline;
+	padding-top: 20px;
+	margin-left: -17px;
+}
+
+
+/*******END CSS FOR VENDOR CHANGES******/
+
+
+/**START Download Report CSS**/
+li{
+	list-style-image: none;
+list-style-type: none;
+}
+
+
+.reportDownload{
+	float: right;
+	background-color: #ffffff;
+	width :135px;	
+	direction: ltr;	
+	border: 1px solid #D1D5DC;
+	margin-left:-30px;/*21 Feb,2013 - Download mouse over section should be left aligned*/
+	border-radius:3px;/* 14 Jan 2013 Fix for CSS Issue */
+	}
+
+#downloadButton li a{
+	color: #45525d;
+  padding: 8px;
+  display: block;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 12px;
+  cursor:pointer;
+  text-align: right;/*21 Feb,2013 - Download text should be right aligned*/
+}
+
+.DownloadDataInline{
+	cursor:pointer;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+	display: inline-block;
+	font-size:12px;
+	height:14px; /* Fix for downward arrow image in FF*/
+	
+}
+/**END Download Report CSS**/
+
+
+div#rightNav {
+  float: right;
+width: auto;
+list-style: none;
+margin-right: 10px;
+font-weight: bold;
+}
+
+div#rightNav > a {
+  float: left;
+  margin-left: 44px;
+  color: #fff;
+}
+a.current {
+  background: url('../images/arrow_current.png') bottom center no-repeat;
+}
+
+
+#click-limiter {
+ position:absolute;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ z-index:999999;
+ background:url("../images/loading.gif") no-repeat 50% 50%;
+/* background-color:#000000;*/
+ opacity:0.3;
+ filter:alpha(opacity=30);
+}
+
+/*START 25 Feb 2013 - removed from style.css and placed in global.css download report style  */
+#downloadNav {
+  float: right;
+  margin-top: 5px;
+  z-index: 181;
+}
+#downloadButton > a {
+  border: 1px solid #3e82b6;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #4192db;
+  background: -moz-linear-gradient(top, #73b6ea 1px, #52a8e8 2px, #2d78cc 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top, #73b6ea 1px, #52a8e8 2px, #2d78cc 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #73b6ea 1px, #52a8e8 2px, #2d78cc 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #73b6ea 1px, #52a8e8 2px, #2d78cc 100%); /* IE10+ */
+  background: linear-gradient(top, #73b6ea 1px, #52a8e8 2px, #2d78cc 100%); /* W3C */
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  float: left;
+  font-weight: bold;
+  padding: 2px 18px;
+}
+#downloadButton > a span {
+  background: url('../images/arrow_down_k.png') center right no-repeat;
+  padding-right: 11px;
+}
+/*END 25 Feb 2013 - removed from style.css and placed in global.css download report style  */
