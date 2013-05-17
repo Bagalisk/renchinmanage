@@ -30,9 +30,9 @@
     
 {% for s in students %}
     <tr>
-      <td>{{s.no}}</td>
+      <td>{{s.id}}</td>
       <td>{{s.district}}</td>
-      <td><a href='/student?no={{s.no}}'>{{s.name}}</a></td>
+      <td><a href='/student?id={{s.id}}'>{{s.name}}</a></td>
       <td>{{s.birthday}}</td>
       <td>{{s.parent_name}}</td>
       <td>{{s.parent_tel}}</td>

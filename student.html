@@ -5,10 +5,12 @@
 </head>
 
 <body>
+    <a href='/students'>回到學生清單</a>
     <div class='student' style='position:absulote; top:0px; width:40%'>
       <h1>學生資料</h1>
+      左邊的資料修改完成後，請按左列最下方的「儲存」，將資料保存起來。
       <form method='post' action='student'>
-        <p><input type='text' name='no' value='{{s.no}}' placeholder='序號'/></p>
+        <p><input type='text' name='id' value='{{s.id}}' placeholder='序號'/></p>
         <p><input type='text' name='district' value='{{s.district}}' placeholder='所屬地區'/></p>
         <p><input type='text' name='name' value='{{s.name}}' placeholder='姓名'/>
            <input type='text' name='birthday' value='{{s.birthday}}' placeholder='生日'/>
@@ -20,40 +22,48 @@
            <input type='text' name='classno' value='{{s.classno}}' placeholder='班級'/></p>
         <p><input type='text' name='teacher' value='{{s.teacher}}' placeholder='學校老師姓名'/>
            <input type='text' name='teacher_tel' value='{{s.teacher_tel}}' placeholder='學校老師電話'/></p>
-        <p><textarea type='text' cols='40' rows='5' name='exams' value='{{s.exams}}' placeholder='考試成績'></textarea></p>
-        <p><textarea type='text' cols='40' rows='5' name='daily_notes' value='{{s.daily_notes}}' placeholder='日常表現'></textarea></p>
-        <p><textarea type='text' cols='40' rows='5' name='contact_matters' value='{{s.contact_matters}}' placeholder='家長聯絡事項'></textarea></p>
         <p class='submit'><input type='submit' name='commit' value='儲存'></p>
       </form>
     </div>
 
     <div class='student-detail' style='position:absolute; top:0px; left:40%;'>
       <h1>每日學生紀錄</h1>
+      右邊的每日記錄修改後，請按各分列最右邊的「新增」/「修改」保存資料。
       <table border='1'>
         <tr>
           <th>日期</th>
-          <th></th>
+          <th>考試成績</th>
+          <th>日常表現</th>
+          <th>家長聯絡</th>
           <th></th>
         </tr>
     
-    {% for sd in student_details %}
-        <tr>
-          <td>{{sd.date}}</td>
-          <td>{{sd.exams}}</td>
-          <td>{{sd.daily_notes}}</td>
-          <td>{{sd.contect_matters}}</td>
-          <td> <a href=''>[-]</a></td>
-        </tr>
-    {% endfor %}
         <tr>
           <form method='post' action='student_detail'>
-          <td><input type='text' name='date' value='{{now}}' placeholder='日期'/></td>
-          <td><textarea type='text' cols='40' rows='5' name='exams' value='' placeholder='考試成績'></textarea></p>
-           <p><textarea type='text' cols='40' rows='5' name='daily_notes' value='' placeholder='日常表現'></textarea></p>
-           <p><textarea type='text' cols='40' rows='5' name='contact_matters' value='' placeholder='家長聯絡事項'></textarea></p></td>
-          <td><input type='submit' name='commit' value='儲存'></td>
+          <td><input type='text' name='date' value='' placeholder='日期'/>
+              <br>請不要新增已用過的日期
+              <br>舊的資料會被覆蓋過去
+              <br>(此問題將來會改善)</td>
+          <td><textarea type='text' cols='20' rows='5' name='exams' placeholder='考試成績'></textarea></td>
+          <td><textarea type='text' cols='20' rows='5' name='daily_notes' placeholder='日常表現'></textarea></td>
+          <td><textarea type='text' cols='20' rows='5' name='contact_matters' placeholder='家長聯絡事項'></textarea></td>
+          <td><input type='submit' name='commit' value='新增'></td>
+          <input type='hidden' name='id' value='{{s.id}}'/>
           </form>
         </tr>
+    {% for sd in student_details %}
+        <tr>
+          <form method='post' action='student_detail'>
+          <td><input type='hidden' name='date' value='{{sd.date}}'/>{{sd.date}}</td>
+          <td><textarea type='text' cols='20' rows='5' name='exams'  placeholder='考試成績'>{{sd.exams}}</textarea></td>
+          <td><textarea type='text' cols='20' rows='5' name='daily_notes' placeholder='日常表現'>{{sd.daily_notes}}</textarea></td>
+          <td><textarea type='text' cols='20' rows='5' name='contact_matters' placeholder='家長聯絡事項'>{{sd.contact_matters}}</textarea></td>
+          <td><input type='submit' name='commit' value='修改'>
+              <br><a href=''>[-]</a></td>
+          <input type='hidden' name='id' value='{{s.id}}'/>
+          </form>
+        </tr>
+    {% endfor %}
       </table>
     </div>
 
