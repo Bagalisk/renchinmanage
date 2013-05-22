@@ -1,18 +1,24 @@
-<html>
+<!DOCTYPE html>
 
 <head>
-<title>login</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+<title>仁親登入</title>
 </head>
 
 <body>
-    <div class="login">
-      <h1>登入到學生系統</h1>
-      <form method="post" action="login">
-        <p><input type="password" name="password" value="" placeholder="Password"></p>
-        <p class="submit"><input type="submit" name="commit" value="Login"></p>
-      </form>
-    </div>
+
+<div class='login'>
+<form id="slick-login" action='login' method='post'>
+<h1>學生資料登入系統</h1>
+<label for="username">username</label><input type="text" name="username" class="placeholder" placeholder="帳號"/>
+<label for="password">password</label><input type="password" name="password" class="placeholder" placeholder="密碼"/>
+<input type="submit" value="登入">
+</form>
+</div>
 
 </body>
 
 </html>
+

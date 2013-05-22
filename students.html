@@ -1,75 +1,35 @@
-<html>
+<!DOCTYPE html>
 
 <head>
-<title>student</title>
+<meta charset='utf-8'>
+<link rel='stylesheet' type='text/css' href='/css/style.css' />
+
+<title>學生清單</title>
 </head>
 
 <body>
 
-<h1>學生清單</h1>
-<p>
-  <table border='1'>
-    <tr>
-      <th>序號</th>
-      <th>地區</th>
-      <th>姓名</th>
-      <th>生日</th>
-      <th>家長</th>
-      <th>電話</th>
-      <th>住址</th>
-      <th>緊急聯絡電話</th>
-      <th>學校</th>
-      <th>班級</th>
-      <th>老師</th>
-      <th>電話</th>
-      <th>考試成績</th>
-      <th>日常表現</th>
-      <th>聯絡事項</th>
-      <th></th>
-    </tr>
-    
+<div class='newcard'>
+<h1><a href='student'>新增學生基本資料</a></h1>
+</div>
+
 {% for s in students %}
-    <tr>
-      <td>{{s.id}}</td>
-      <td>{{s.district}}</td>
-      <td><a href='/student?id={{s.id}}'>{{s.name}}</a></td>
-      <td>{{s.birthday}}</td>
-      <td>{{s.parent_name}}</td>
-      <td>{{s.parent_tel}}</td>
-      <td>{{s.address}}</td>
-      <td>{{s.emergency_tel}}</td>
-      <td>{{s.school}}</td>
-      <td>{{s.classno}}</td>
-      <td>{{s.teacher}}</td>
-      <td>{{s.teacher_tel}}</td>
-      <td>{{s.exams}}</td>
-      <td>{{s.daily_notes}}</td>
-      <td>{{s.contact_matters}}</td>
-      <td> <a href=''>[-]</a></td>
-    </tr>
+
+<div class='card'>
+<h1><a href='/student?id={{s.id}}'>學生基本資料</a></h1>
+<label for='name'>姓名</label><input type='text' name='name' class='placeholder' placeholder='姓名' value='{{s.name}}'/>
+<label for='birthday'>生日</label><input type='text' name='birthday' class='placeholder' placeholder='生日' value='{{s.birthday}}'/>
+<label for='address'>地址</label><input type='text' name='address' class='placeholder' placeholder='地址' value='{{s.address}}'/>
+<label for='parent'>家長</label><input type='text' name='parent' class='placeholder' placeholder='家長姓名' value='{{s.parent_name}}'/>
+<label for='parent_tel'>電話</label><input type='text' name='parent_tel' class='placeholder' placeholder='電話' value='{{s.parent_tel}}'/>
+<label for=''></label><input type='text' name='' class='placeholder' placeholder='' value=''/>
+<label for='emergency_tel'>緊急聯絡電話</label><input type='text' name='emergency_tel' class='placeholder' placeholder='緊急聯絡人及電話' value='{{s.emergency_tel}}'/>
+<label for=''>學校</label><input type='text' name='school' class='placeholder' placeholder='學校' value='{{s.school}}'/>
+<label for='classno'>班級</label><input type='text' name='classno' class='placeholder' placeholder='班級' value='{{s.classno}}'/>
+<label for=''>老師</label><input type='text' name='teacher' class='placeholder' placeholder='老師' value='{{s.teacher}}'/>
+<label for=''>電話</label><input type='text' name='teacher_tel' class='placeholder' placeholder='電話' value='{{s.teacher_tel}}'/>
+</div>
 {% endfor %}
-
-    <tr>
-      <td><p><a href='student'>[+]</a></p></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-</td>
-    </tr>
-
-  </table>
-</p>
 
 </body>
 
