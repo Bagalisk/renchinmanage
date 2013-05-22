@@ -16,7 +16,7 @@
 {% for s in students %}
 
 <div class='card'>
-<h1><a href='/student?id={{s.id}}'>學生基本資料</a></h1>
+<h1><a href='/student?id={{s.id}}'>{{s.name}}</a></h1>
 <label for='name'>姓名</label><input type='text' name='name' class='placeholder' placeholder='姓名' value='{{s.name}}'/>
 <label for='birthday'>生日</label><input type='text' name='birthday' class='placeholder' placeholder='生日' value='{{s.birthday}}'/>
 <label for='address'>地址</label><input type='text' name='address' class='placeholder' placeholder='地址' value='{{s.address}}'/>
